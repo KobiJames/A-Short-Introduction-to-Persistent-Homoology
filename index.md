@@ -1,5 +1,5 @@
 
-##Prelude
+## Prelude
 
 Firstly I will introduce a few mathematical terms.
 
@@ -8,12 +8,12 @@ Most generally, a _Topology_ is a set of subsets on a collection of points. Ofte
 _Homology_ is a mathematical tool that we use to analyze the shape of a space. More specifically, we use Homology to understand the placement of holes and gaps within a defined Topology.
 
 
-##Homology
+## Homology
 
 Let us first consider an example where we sample 30 points from a circle.
 We will call this our data.
 
-![Image One](\images\stuff1.png)
+![Image 1](stuff1.png)
 
 Our goal here is to perform an analysis that will alert us to the fact that our points were sampled from this circle.
 
@@ -22,13 +22,13 @@ Similar to the idea of a metric space, we want to then add structure to our data
 For showcasing purposes, we will choose a distance value, and connect every point that are at least that close.
 
 
-![Image Two](\images\stuff2.png)
+![Image 2](stuff2.png)
 
 Here we chose a value of 0.2
 
 We can visualize this by drawing circles around each point of radius 0.1 (half the distance value), in which case any points whose circles intersect are connected.
 
-![Image Three](\images\stuff3.png)
+![Image 3](stuff3.png)
 
 Here we will introduce a new term.
 
@@ -50,7 +50,7 @@ Finally, when a simplicial complex has a loop with only lower dimensional simpli
 
 As an example, if we increase the distance parameter to 0.5, we can see a large hole forming in the center.
 
-![Image Four](\images\stuff4.png)
+![Image 4](stuff4.png)
 
 
 The importance of inducing a simplicial complex on our data is very straightforward: it allows us to perform homology on our data, which will compute for us the presence of holes and simplices.
@@ -65,7 +65,7 @@ Firstly, we can compute at what distance a hole appears and disappears. This all
 
 For example, we can see that the larger central hole forms at a distance parameter of 0.5 (although it probably forms much earlier). If we increase the distance parameter to 1.2, we lose the central hole.
 
-![Image Five](\images\stuff5.png)
+![Image 5](stuff5.png)
 
 For smaller holes we would also be able to compute persistence. Generally, when we see holes that appear and disappear over a small increment of our distance parameter, we discard these as noise. When we see more persistent holes, we count these as structures in our data.
 
@@ -86,12 +86,13 @@ Relating to this idea of stability, MCMC can be applied to the persistence graph
 Persistent homology can be a very useful tool for analyzing structures in data that could be otherwise very hard to find. Persistent homology reaches into many aspects of machine learning, of which Monte Carlo methods are one.
 
 
-MCMC for persistent homology paper: https://arxiv.org/abs/1711.01570
+MCMC for persistent homology paper: [https://arxiv.org/abs/1711.01570](https://arxiv.org/abs/1711.01570)
 
-Random persistence diagram paper : https://arxiv.org/abs/2104.07737
+Random persistence diagram paper : [https://arxiv.org/abs/2104.07737](https://arxiv.org/abs/2104.07737)
 
 Code used for graphs (julia):
-```
+
+```julia
 using Plots
 using Random
 amnt = 30
