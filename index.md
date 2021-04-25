@@ -71,7 +71,7 @@ For smaller holes we would also be able to compute persistence. Generally, when 
 
 Commonly, we call (a,b), the interval of persistent of a hole, as it's _Barcode_. Note that a and b are distance parameter values.
 
-The greater the interval, of existence, the more important a hole is, generally.
+The greater the interval of existence, the more important a hole is generally.
 
 ## Persistent Homology and Monte Carlo Methods
 
@@ -81,7 +81,7 @@ Intervals of existence are generally stable over noise in the data. This is a ve
 
 Relating to this idea of stability, MCMC can be applied to the persistence graphs produced from homology. [In this paper](https://arxiv.org/abs/1711.01570) the authors attempt to create simulated replications of persistence diagrams using the standard Metropolis-Hastings algorithm.
 
-[In another paper](https://arxiv.org/abs/2104.07737) the authors propose "random persistence diagram generation", whose purpose is to make the creation of persistence diagrams more tractable for large datasets.
+[In another paper](https://arxiv.org/abs/2104.07737) the authors propose "random persistence diagram generation" whose purpose is to make the creation of persistence diagrams more tractable for large datasets.
 
 Persistent homology can be a very useful tool for analyzing structures in data that could be otherwise very hard to find. Persistent homology reaches into many aspects of machine learning, of which Monte Carlo methods are one.
 
